@@ -1,0 +1,359 @@
+<!Doctype html>
+<html>
+<head>
+    <title> Calculator </title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1">
+    <link rel='stylesheet' href='styles/styles.css'>
+</head>
+
+<body>
+    <div class='body_cont' id='bdcont' align=''>
+        <div style='display: none' id='landscape'>
+            <div class='lflex' id='lflex'>
+                <div>
+                    LandScape mode is not supported
+                </div>
+            </div>
+        </div>
+        <div class='about' id='abtCont'>
+            <div class='hea'>
+                <div class='table'>
+                    <div class='tr head'>
+                        <div style='width:10%' class='td' onclick='hide("abtCont", "abtCovD")'>
+                            <img class='mor' src='img/back.png'>
+                        </div>
+                        <div style='width:80%' class='txt td' align='left'>
+                            About
+                        </div>
+                        <div style='width:10%' class='td' align='right'>
+                        </div>
+                    </div>
+                    <br><br><br>
+                    <div id='abtCovD' class='histTr tr'>
+                        <div class='histTd td' id='abtCov'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='dev' id='devCont'>
+            <div class='hea'>
+                <div style='height:100%' class='table'>
+                    <div class='tr head'>
+                        <div style='width:10%' class='td' onclick='hide("devCont")'>
+                            <img class='mor' src='img/back.png'>
+                        </div>
+                        <div style='width:80%' class='txt td' align='left'>
+                            Developer
+                        </div>
+                        <div style='width:10%' class='td' align='right'>
+                        </div>
+                    </div>
+                    <br><br><br>
+                    <div class='tr'>
+                        <div align='left' class='td' id='devCov'>
+                            <div class='devFlex' align='left'>
+                                <div align='center'>
+                                    <img src='img/noble.jpg' style='border-radius: 6px; border: 1px solid #ffffff; height:150px; width: 120px;'>
+                                    <br>
+                                    <b>
+                      { Richard Franklin }
+                  </b>
+                                    <br>
+                                    <br>
+                                    <b style='font-weight:bold;'>
+                     WhatsApp :  09031826266
+                  </b>
+                                    <br>
+                                    <b>
+                      fb : facebook.com/dsmarts1
+                  </b>
+                                    <br>
+                                    <br>
+                                    <BR>
+                                    <br>
+                                    <b> © Noble - C2GEN Apps </b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style='display:none' class='history' id='histCont'>
+            <div class='hea'>
+                <div class='table'>
+                    <div class='tr head'>
+                        <div style='width:10%' class='td' onclick='hide("histCont")'>
+                            <img class='mor' src='img/back.png'>
+                        </div>
+                        <div style='width:80%' class='txt td' align='left'>
+                            History
+                        </div>
+                        <div style='width:10%' class='td' align='right'>
+                            <div style='padding: 0px 15px' onclick='showHistOpt();'>
+                                <img class='more' src='img/more_white.png'>
+                            </div>
+                            <div onclick='showFLay()' class='histClear' id='histClear'> Clear </div>
+                        </div>
+                    </div>
+                    <div id='noHistCov' class='noHistCov'>
+                        <div id='noHist' class='noHist'>
+                            <div class='noHistTxt'>
+                                No History
+                            </div>
+                        </div>
+                    </div>
+                    <div class='fullLay' id='fLay'>
+                        <div class='wipeC'>
+                            <div class='wipeCont'>
+                                <div class='table'>
+                                    <div style='width:100%' class='tr'>
+                                        <div class='td' align='left'>
+                                            <nobr>Clear History and Memory ? </nobr>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='table'>
+                                    <div class='tr'>
+                                        <div class='td' align='right'>
+                                            <div class='layOpt' onclick='dismiss()'> Dismiss </div>
+                                        </div>
+                                        <div class='td' align='right'>
+                                            <div class='layOpt' onclick='clearHist()'> Clear </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br><br>
+                    <div id='histCovD' class='histTr tr'>
+                        <div class='histTd td' id='histCov'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='screen flex' id='flx'>
+            <div class='opt table'>
+                <div class='tr'>
+                    <div class='td' align='left' id='modeC'>
+                    </div>
+                    <div class='td' align='right'>
+                        <div id='optCont' class='optCont' align='center'>
+                            <ul>
+                                <li onclick='showHistory()'> History </li>
+                                <li onclick='showAbout()'> About </li>
+                                <li onclick='showDev()'> Developer </li>
+                            </ul>
+                        </div>
+                        <img onclick='showOpt()' class='more' src='img/more1.png'>
+                    </div>
+                </div>
+            </div>
+            <div id='screen'></div>
+            <br>
+            <div class='table tbscreen'>
+                <div class='tr'>
+                    <div class='td'>
+                        <div id='res'> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='overlay' id='lay'>
+
+        </div>
+        <div style='height:100%' class='btn_cont table' id='bcc'>
+            <div class='tr c'>
+                <div style='height:100%' class='b td' align='lef'>
+                    <div style='padding-top : 18px; height:100%;position:relative;' class='table'>
+                        <div class='tr'>
+                            <div class='td btn'>
+                                <span id='effect' class='effect'> 7 <span>
+                </div>
+                <div class='td btn'>
+                   <span class='effect'>
+                   8
+                   </span>
+                            </div>
+                            <div class='td btn'>
+                                <span class='effect'>
+                  9
+                  </span>
+                            </div>
+                        </div>
+                        <div class='tr'>
+                            <div class='td btn'>
+                                <span class='effect'>
+                  4
+                  </span>
+                            </div>
+                            <div class='td btn'>
+                                <span class='effect'>
+                 5
+                 </span>
+                            </div>
+                            <div class='td btn'>
+                                <span class='effect'>
+                 6
+                 </span>
+                            </div>
+                        </div>
+                        <div class='tr'>
+                            <div class='td btn'>
+                                <span class='effect'>
+                 1
+                 </span>
+                            </div>
+                            <div class='td btn'>
+                                <span class='effect'>
+                 2
+                 </span>
+                            </div>
+                            <div class='td btn'>
+                                <span class='effect'>
+                 3
+                 </span>
+                            </div>
+                        </div>
+                        <div class='tr'>
+                            <div class='td btn'>
+                                <span class='effect'>
+                 .
+                 </span>
+                            </div>
+                            <div class='td btn'>
+                                <span class='effect'>
+                 0
+                 </span>
+                            </div>
+                            <div class='td' onclick="solve('true', this)">
+                                <span class='effect'>
+                 =
+                 </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='td dl' align='left'>
+                    <div align='center' class='table dl_tb'>
+                        <div class='tr'>
+
+                            <div class='td' id='del' onclick='del()' data-long-press-delay="400">
+                                <span class='effec'> 
+                  DEL
+                  </span>
+                            </div>
+                        </div>
+                        <div class='tr'>
+                            <div class='td btn'>
+                                <span class='effec'>÷</span>
+                            </div>
+                        </div>
+                        <div class='tr'>
+                            <div class='td btn'>
+                                <span class='effec'>×</span>
+                            </div>
+                        </div>
+                        <div class='tr'>
+                            <div class='td btn'>
+                                <span class='effec'>
+                   -
+                 </span>
+                            </div>
+                        </div>
+                        <div class='tr'>
+                            <div class='td btn'>
+                                <span class='effec'>
+                   +
+                 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div align='center' class='table dl_tb'></div>
+                </div>
+                </div>
+                <div class='b_right td swipe_left' align='right' id="swipeCont">
+                    <div style='padding-top: 18px; height:100%' class='table'>
+                        <div class='tr'>
+                            <div style='width: 10%; padding:0 !important;' class='td'>
+                                <div  class='table'>
+                                    <div class='tr'>
+                                        <div onclick='swipe(this)' id='symb' class='td not_swiped' align='left'>
+                                            << </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style=' height:inherit' class='td'>
+                                    <div style='height:100%' class="table" id='sfn'>
+                                        <div class='tr'>
+                                            <div id='inv' class='td' onclick='inv(this)'>
+                                                INV
+                                            </div>
+                                            <div id='modeCo' class='td' onclick='changeMode(this)'>
+                                                DEG
+                                            </div>
+                                            <div class='td btn' onclick='percent(this)'>
+                                                %
+                                            </div>
+                                        </div>
+                                        <div class='tr'>
+                                            <div id='sin' class='td btn'>
+                                                sin
+                                            </div>
+                                            <div id='cos' class='td btn'>
+                                                cos
+                                            </div>
+                                            <div id='tan' class='td btn'>
+                                                tan
+                                            </div>
+                                        </div>
+                                        <div class='tr'>
+                                            <div id='in' class='td btn'>
+                                                ln
+                                            </div>
+                                            <div id='log' class='td btn'>
+                                                log
+                                            </div>
+                                            <div class='td btn' id=''>
+                                                !
+                                            </div>
+                                        </div>
+                                        <div class='tr'>
+                                            <div class='td btn'>
+                                                π
+                                            </div>
+                                            <div class='td btn'>
+                                                e
+                                            </div>
+                                            <div class='td btn'>
+                                                ^
+                                            </div>
+                                        </div>
+                                        <div class='tr'>
+                                            <div class='td btn'>
+                                                (
+                                            </div>
+                                            <div class='td btn'>
+                                                )
+                                            </div>
+                                            <div id='sqr' class='td btn'>
+                                                √
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='js/app.js'></script>
+    <script src='js/long-press.js'></script>
+</body>
+</html>

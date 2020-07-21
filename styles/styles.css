@@ -1,0 +1,610 @@
+html,
+body {
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+    /* position : relative; */
+}
+
+#landscape {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 20;
+}
+
+#landscape .lflex {
+    position: relative;
+    height: inherit;
+    width: inherit;
+    color: #00bcd4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: fantasy;
+    font-weight: bold;
+}
+
+#devCov {
+    height: 100%;
+    width: 100%;
+    /* border: ; */
+}
+
+/* #devCov * {
+    border: ;
+} */
+
+.devFlex {
+    height: inherit;
+    width: inheri;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #ccc;
+    padding: 50px 10px;
+}
+
+#devCov b {
+    color: #00bcd4;
+}
+
+#devCov di {
+    height: 100%;
+    position: relative;
+    /* width: ; */
+}
+
+.wipeC {
+    height: inherit;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+    position: relative;
+}
+
+/* .wipeC di { */
+    /* border: ; */
+/* } */
+
+.wipeCont {
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 75%;
+}
+
+.dateTd {
+    color: #00bcd4;
+    font-weight: bold;
+}
+
+.histExp {
+    color: #414141;
+    font-size: 25px;
+}
+
+.histTb {
+    border-bottom: .5px solid #ccc;
+}
+
+.currentExp {
+    padding: 15px 5px;
+    border-top: 1px solidb #ccc;
+    font-size: 15px;
+    white-space: wrap;
+    word-break: break-all;
+}
+
+.currentExp .etxt {
+    font-size: 25px;
+}
+
+.history .head,
+.about .head,
+.dev .head {
+    background: #00bcd4;
+    color: #E0F7FA;
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+    /* font-size : px; */
+    font-family: monospace;
+    z-index: 12;
+    box-shadow: -3px -1px 5px 4px rgba(0, 0, 0, 0.2);
+}
+
+.history .table {
+    width: 100%;
+    /* position : relative !important; */
+}
+
+.history .txt,
+.dev .txt,
+.about .txt {
+    /* font-family: ; */
+    font-size: 20px;
+}
+
+#histCo {
+    border: 21px solid red;
+    overflow-y: auto !important;
+    height: 90%;
+    width: 100%;
+    position: r;
+}
+
+.histTd li {
+    padding: 7px 2px;
+    /* white-space : initial;
+    word-break : keep-all; */
+}
+
+.histTd * :not(ul) {
+    padding: 10px;
+    position: relative;
+    width: inherit;
+    margin-left: 3px;
+    z-index: 5;
+    width: 89.5%;
+    /* border: ; */
+    white-space: wrap ! important;
+    word-break: break-all ! important;
+    /* word-wrap : break-word ! important; */
+}
+
+.histTr {
+    width: 100%;
+    position: absolute;
+    height: 90%;
+    /*background: url('pencil.jpg');
+	background-size: cover;*/
+    overflow-y: auto;
+    /* border: ; */
+    white-space: wrap ! important;
+    word-break: break-all ! important;
+}
+
+.layOpt {
+    color: #00bcd4;
+    font-weight: bold;
+}
+
+.history,
+.dev,
+.about {
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    position: absolute;
+    background: #fff;
+    bottom: 62%;
+    display: none;
+    transition: display, bottom 300ms linear;
+}
+
+.history .td,
+.dev .td,
+.about .td {
+    height: 7%;
+    padding: 15px;
+}
+
+.history .td.right {
+    margin-left: 15%;
+}
+
+#inv {
+    transition: background 200ms ease-in;
+}
+
+#modeC {
+    font-weight: bold;
+    transition: background 200ms ease-in;
+}
+
+* {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.dl_flex .btn {
+    border-radius: 590px;
+    transition: padding, background 2s;
+}
+
+.dl_fle .effec {
+    display: inline-block;
+    background: transparent;
+    position: relative;
+    padding: 15px 5px;
+    transition: padding, background 2s;
+}
+
+.effect {
+    display: inline-block;
+    background: transparent;
+    /* height : 34px; */
+    /* //width : 34px; */
+    position: relative;
+    border-radius: 40px;
+    /* //padding : 25px 16px; */
+    transition: padding, background 2s;
+}
+
+.effect:hove {
+    background: #ccc;
+}
+
+.table {
+    display: table;
+    width: 100%;
+}
+
+.optCont,
+.histClear {
+    display: none;
+    position: absolute;
+    width: 0;
+    text-align: center;
+    background: #fff;
+    transition: margin, width 260ms linear;
+    color: #555;
+}
+
+.optCont {
+    /* //box-shadow : 2px 2px 3px 2px #ccc; */
+    z-index: 4;
+    right: 2px;
+}
+
+.histClear {
+    font-size: initial;
+    font-weight: normal;
+    padding: 10px 5px;
+    z-index: 12 !important;
+    top: 10%;
+    right: -20px;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: -1px 1px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.histClear:hover {
+    background: #ccc;
+}
+
+.optContw {
+    width: 35%;
+}
+
+.optCont ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.optCont li:hover {
+    background: #f2f2f2;
+}
+
+.optCont li {
+    text-align: left;
+    padding: 7px;
+}
+
+#modeC {
+    padding-left: 5px;
+    color: #999999;
+}
+
+.mor {
+    width: 13px;
+    height: 13px;
+    vertical-align: middle;
+}
+
+.more {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    /* z-index: ; */
+}
+
+.opt .td {
+    /* font-weight: ; */
+    /* width : 33.35%; */
+    font-family: monospace;
+}
+
+.noHistCov {
+    position: absolute;
+    /* background : rgba(0,0,0,0.4); */
+    height: 80%;
+    width: 100%;
+    z-index: 14;
+    bottom: 0;
+    display: none;
+}
+
+.noHist {
+    height: inherit;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #212121;
+    font-size: 15px;
+}
+
+.fullLay {
+    position: absolute;
+    /* background : rgba(0,0,0,0.4); */
+    height: 100%;
+    width: 100%;
+    z-index: 15;
+    bottom: 0;
+    display: none;
+    transition: background 100ms ease-in;
+}
+
+#lay {
+    position: absolute;
+    background: #212121;
+    height: 63%;
+    width: 100%;
+    z-index: 1;
+    bottom: 0;
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0.5;
+    transition: background, display 2s ease-in-out;
+}
+
+/* .b .table {
+    table-width: fixed;
+} */
+
+.b .td {
+    vertical-align: middle;
+    font-family: cursive;
+    width: 33.35%;
+    /* height: 25% ! important; */
+    border-radius: 40px;
+    transition: background 260ms linear;
+}
+
+/* .tbscreen * {} */
+
+/* .tbscreen .td,
+.tbscreen .tr { */
+    /* overflow-x: auto !important; */
+/* } */
+
+#screen {
+    background: #fff;
+    color: #000;
+    font-size: 50px;
+    text-align: right;
+    overflow-x: auto !important;
+    width: 100%;
+    font-family: sans-serif;
+    position: relative;
+    height: 35%;
+    overflow: hidden;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+.notSwiped {
+    width: 12% !important;
+    transition-duration: 100ms;
+    transition-timing-function: linear;
+    transition-property: width, position;
+}
+
+.swiped {
+    width: 75% !important;
+    position: absolute !important;
+    /* height : 61.3% !important; 	 */
+    transition-duration: 100ms;
+    transition-timing-function: linear;
+    transition-property: width, position;
+}
+
+#sfn {
+    display: table;
+    visibility: hidden;
+    vertical-align: top;
+    text-align: center;
+}
+
+#symb.not_swiped {
+    left : 25%;
+}
+#symb._swiped{
+    left : 5%;
+}
+#symb {
+    
+    /* vertical-align: baseline; */
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 45%;
+    transition: transform 500ms ease-in-out;
+}
+
+#sfn .td {
+    /* height : 10%; */
+    vertical-align: middle;
+    border-radius: 40px;
+}
+
+#inv {
+    border-radius: 3px ! important;
+}
+
+#res {
+    position: relative;
+    /*margin-top : 10px;*/
+    margin-left: 26%;
+    margin-right: 0px;
+    font-size: 20px;
+    color: grey;
+    text-align: right;
+    z-index: 3;
+    padding-right: 10px;
+    padding: 15px;
+    word-wrap: no-wrap;
+}
+
+.td {
+    display: table-cell;
+}
+
+.tr {
+    display: table-row;
+    width: 100%;
+}
+
+.b {
+    background: #424242;
+    height: inherit;
+    padding: 5px;
+    color: #fff;
+    position: relative;
+    width: 60% !important;
+    left: 0;
+    margin-left: 0;
+    font-size: 30px;
+    text-align: center;
+    /* //font-weight: bold; */
+}
+
+.dl_flex {
+    font-family: sans-serif;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    height: 100%;
+    padding-right: 5px;
+    text-align: center;
+    font-size: 20px;
+    color: #f5f5f5;
+    /* // padding-bottom: 380px; */
+    margin-right: 0! important;
+}
+
+.btn_cont {
+    bottom: 0 ! important;
+    height: 65% ! important;
+    width: 100%;
+    /* //border : 1px solid yellow; */
+    position: absolute;
+    margin: 0 ! important;
+    overflow: hidden !important;
+}
+
+.b_right {
+    padding-top: 20%;
+    font-family: sans-serif;
+    /*background : #1be9d6;*/
+    background: #1de9b6;
+    height: 98%;
+    padding: 5px;
+    color: #004d40;
+    right: 0;
+    margin-right: 0;
+    position: absolute;
+    width: 12%;
+    transition-duration: 100ms;
+    transition-timing-function: linear;
+    transition-property: width, position;
+    z-index: 2;
+    bottom: 0;
+}
+
+/* .b_right .td { */
+    /* border-radius : 60px; */
+/* } */
+
+.dl {
+    /* background : red; */
+    /* padding-top : 10% ; */
+    background: #616161;
+    height : 98%;
+    color: #004d40;
+     /* : 0; */
+    margin-left: 0 ! important;
+    /* position: relative; */
+    width: 28% ! important;
+    z-index : 5;	
+}
+
+/* .d_tb:before { */
+    /*display : block;
+	position : relative;
+	width : 100%;
+	height : 100%;*/
+/* } */
+
+.dl_tb {
+    padding: 12px 0px;
+    display: relative;
+    height: 90% ! important;
+    width: 50%;
+}
+
+.dl_tb .tr {
+    height: 20%;
+    /* background : orange; */
+}
+
+.dl_tb .td {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 20px;
+    color: #f5f5f5;
+    vertical-align: middle;
+    /* border: 1px solid yellow; */
+    border-radius: 40px;
+}
+
+.dl_tb .effec {
+    background: transparent;
+    /* height : 34px; */
+    /* width : 34px; */
+    position: relative;
+    padding: 25px 0px;
+    transition: padding, background 2s;
+}
+
+.screen {
+    background: #fff;
+    height: 35% ! important;
+    padding: 5px;
+    color: #bdbdbd;
+    position: relative;
+    box-shadow: -1px -1px 4px 2px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    /* border : 1px solid green; */
+}
+
+.body_cont {
+    height: 100%;
+    width: 100%;
+}
